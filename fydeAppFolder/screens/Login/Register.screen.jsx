@@ -5,12 +5,18 @@ import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from './../../firebase.config'
 import { useNavigation } from '@react-navigation/native';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
+import { useDispatch } from 'react-redux';
+import { loginSuccess, logout } from './../../redux/userSlice'
+
 
 
 
 export const Register = () => {
 
    const navigation = useNavigation();
+
+   const dispatch = useDispatch();
+
 
    const [email, setEmail] = useState('');
    const [password, setPassword] = useState('');
@@ -72,7 +78,7 @@ export const Register = () => {
                }}>{error}</Text>
 
             </View>
-            <TouchableOpacity title="Register" onPress={navigateBack} style={styles.card} >
+            <TouchableOpacity title="Register" onPress={handleRegister} style={styles.card} >
                <Text style={{
                   fontSize: 24,
                   textAlign: 'center',

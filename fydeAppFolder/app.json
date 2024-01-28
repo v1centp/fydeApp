@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "fydeAppFolder",
-    "slug": "fydeAppFolder",
+    "name": "fydeApp",
+    "slug": "fydeApp",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -15,7 +15,8 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.fyde.app"
     },
     "android": {
       "adaptiveIcon": {
@@ -25,6 +26,11 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "6d9ef700-598b-4c4e-b7ea-032688e5386a"
+      }
     }
   }
 }
