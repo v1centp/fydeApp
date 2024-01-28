@@ -1,4 +1,4 @@
-# Project Name
+# Beenzer
 
 A brief description of what the project does.
 
